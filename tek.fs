@@ -52,7 +52,17 @@ boldf off
   dup 32 /   32 + emit
       32 mod 64 + emit ;
 
+: plot ( x y -- )
+  FS at ;
+  
 : color ( c -- )
   ESC ." [1;3" 48 + emit 109 emit ;
-        
 
+: large   ESC 56 emit ;
+: medium  ESC 57 emit ;
+: small   ESC 58 emit ;
+: tiny    ESC 59 emit ;
+
+: demo1
+  page gs 500 500 at 300 300 at 300 500 at 500 300 at 500 500 at ;
+  
