@@ -18,7 +18,7 @@ decimal
 variable boldf
 boldf off
 
-: page ESC 12 emit ;
+: page ESC FF ;
 
 ' page alias cls
 
@@ -62,7 +62,4 @@ boldf off
 : medium  ESC 57 emit ;
 : small   ESC 58 emit ;
 : tiny    ESC 59 emit ;
-
-: demo1
-  page gs 500 500 at 300 300 at 300 500 at 500 300 at 500 500 at ;
   
